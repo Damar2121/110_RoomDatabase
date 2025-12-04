@@ -85,6 +85,7 @@ fun HomeScreen(
 @Composable
 fun BodyHome(
     itemSiswa: List<Siswa>,
+    onSiswaClick: (Siswa) -> Unit,
     modifier: Modifier=Modifier){
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -109,7 +110,7 @@ fun BodyHome(
 fun ListSiswa(
     itemSiswa : List<Siswa>,
     onSiswaClick: (Siswa) -> Unit,
-    modifier: Modifier
+    modifier: Modifier=Modifier
 ){
     LazyColumn(modifier = Modifier){
         items(items = itemSiswa, key = {it.id}){
